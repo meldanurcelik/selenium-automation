@@ -33,5 +33,22 @@ public class Test1 {
         WebElement submitButton = driver.findElement(new By.ByCssSelector("button#submit"));
         submitButton.click();
 
+        //Selenium ile web elementlerindeki texti bulma
+        WebElement fullNameText = driver.findElement(By.xpath("//div/p[@id='name']"));
+        String name = fullNameText.getText();
+        System.out.println(name);
+
+        WebElement emailText = driver.findElement(By.xpath("//div/p[@id='email']"));
+        String emailT = emailText.getText();
+        System.out.println(emailT);
+
+        WebElement currentAddressText = driver.findElement(By.xpath("//div[@id='output']//p[@id='currentAddress']"));
+        String currentAddressT = currentAddressText.getText();
+        System.out.println(currentAddressT);
+
+        WebElement permanentAddressText = driver.findElement(By.xpath("//div[@id='output']//p[@id='permanentAddress']"));
+        String permanentAddressT = permanentAddressText.getText();
+        System.out.println(permanentAddressT);
+
     }
 }
