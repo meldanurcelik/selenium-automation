@@ -32,5 +32,15 @@ public class Test5 {
         WebElement rightClickMessage = driver.findElement(By.id("rightClickMessage"));
         String rightClicktessageText = rightClickMessage.getText();
         System.out.println(rightClicktessageText);
+
+        //--Dinamik elementlere tıklama
+        //1. //div/button[starts-with(text(), 'Click Me')]
+        //2. //div[last()]/button
+        WebElement dynamicClickButon = driver.findElement(By.xpath("//div/button[starts-with(text(), 'Click Me')]"));
+        dynamicClickButon.click();
+
+        WebElement dynamicClickMessage = driver.findElement(By.id("dynamicClickMessage"));
+        String dynamicClickMessageText = dynamicClickMessage.getText();
+        System.out.println(dynamicClickMessageText);
     }
 }
