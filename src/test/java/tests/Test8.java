@@ -26,6 +26,10 @@ public class Test8 {
         Thread.sleep(3000);
         boolean isDownloaded = isFileDownloaded(path,fileName);
         System.out.println(isDownloaded);
+
+        //Web sayfasından dosya yükleme işlemi yapma
+        WebElement uploadButon = driver.findElement(By.id("uploadFile"));
+        uploadButon.sendKeys("C:/Users/melda/Downloads/test.png");
     }
 
     public static boolean isFileDownloaded(String downloadPath, String fileName) {
